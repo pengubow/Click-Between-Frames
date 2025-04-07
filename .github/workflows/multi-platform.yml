@@ -18,9 +18,9 @@ jobs:
         - name: macOS
           os: macos-latest
 
-        # - name: iOS
-        #   os: macos-latest
-        #   target: iOS
+        - name: iOS
+          os: macos-latest
+          target: iOS
 
         - name: Android32
           os: ubuntu-latest
@@ -41,7 +41,7 @@ jobs:
         with:
           combine: true
           target: ${{ matrix.config.target }}
-          # sdk: nightly
+          sdk: nightly
 
   package:
     name: Package builds
